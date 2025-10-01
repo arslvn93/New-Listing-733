@@ -55,7 +55,8 @@ const Footer = () => {
               </li>
               <li className="flex items-start">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-4 mt-0.5 text-white/40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                  <path d="m22 7-10 5L2 7"></path>
                 </svg>
                 <span>{contactInfo.agent.email}</span>
               </li>
@@ -71,8 +72,7 @@ const Footer = () => {
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg>
                 <div>
-                  <p>{property.address.street}</p>
-                  <p>{property.address.city}, {property.address.state} {property.address.zip}</p>
+                  <p>{contactInfo.agent.companyAddress}</p>
                 </div>
               </li>
             </ul>
