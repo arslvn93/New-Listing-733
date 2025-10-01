@@ -549,7 +549,7 @@ export const siteBranding = {
     },
     heroImage: "https://salesgenius.s3.ca-central-1.amazonaws.com/uploads/1759258465470-001.jpg",
     footer: {
-      copyrightText: "© 2024 118 Patterson St N. All rights reserved.",
+      copyrightText: "©2025 Maddison Dombroski. All rights reserved.",
       disclaimer: "This website is for informational purposes only. Details are subject to change."
     },
     companyName: "REAL ONTARIO BROKERAGE",
