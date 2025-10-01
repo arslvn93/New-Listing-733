@@ -16,9 +16,7 @@ interface SiteMetadata {
   description: string;
   keywords: string;
   ogImage: string;
-  ogType: string;
   twitterCard: string;
-  canonical: string;
   twitterHandle: string;
 }
 
@@ -175,32 +173,6 @@ const BrandingForm: React.FC<BrandingFormProps> = ({
               <p className="text-white/40 text-xs">
                 Comma-separated keywords for SEO
               </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <div className="space-y-2">
-                <Label htmlFor="canonical" className="text-white">Canonical URL</Label>
-                <Input
-                  id="canonical"
-                  name="canonical"
-                  value={metaData.canonical}
-                  onChange={handleMetaChange}
-                  placeholder="https://yourdomain.com"
-                  className="bg-black/50 border-white/10 text-white"
-                />
-              </div>
-              
-              <div className="space-y-2">
-                <Label htmlFor="ogType" className="text-white">Open Graph Type</Label>
-                <Input
-                  id="ogType"
-                  name="ogType"
-                  value={metaData.ogType}
-                  onChange={handleMetaChange}
-                  placeholder="website"
-                  className="bg-black/50 border-white/10 text-white"
-                />
-              </div>
             </div>
             
             <div className="space-y-2 mb-6">
