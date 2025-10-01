@@ -382,10 +382,22 @@ const AdminDashboard = () => {
               <BrandingForm
                 initialData={adaptedConfig.siteBranding}
                 initialMeta={adaptedConfig.siteMetadata}
-                saveData={(branding: any, meta: any) => saveConfig({ 
-                  siteBranding: branding,
-                  siteMetadata: meta
-                }, 'Branding')}
+                saveData={(branding: any, meta: any) => {
+                  // Also mirror company name into contactInfo.agent.company for site usage (e.g., footer)
+                  const updatedContactInfo = {
+                    ...adaptedConfig.contactInfo,
+                    agent: {
+                      ...adaptedConfig.contactInfo?.agent,
+                      company: branding.companyName || adaptedConfig.contactInfo?.agent?.company || ''
+                    }
+                  };
+
+                  return saveConfig({ 
+                    siteBranding: branding,
+                    siteMetadata: meta,
+                    contactInfo: updatedContactInfo
+                  }, 'Branding');
+                }}
                 loading={loading}
               />
             </TabsContent>
